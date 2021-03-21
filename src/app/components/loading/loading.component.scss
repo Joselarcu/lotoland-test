@@ -1,0 +1,8 @@
+@import "../../../styles/variables/colors";
+.loading {
+  display: flex;
+  justify-content: center;
+  .spinner-border {
+    color: $primary-green;
+  }
+}

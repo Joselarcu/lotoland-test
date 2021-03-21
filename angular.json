@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -28,7 +31,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           },
@@ -65,7 +69,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lotoland-test:build"
+            "browserTarget": "lotoland-test:build",
+            "proxyConfig": "my-proxy.js"
           },
           "configurations": {
             "production": {
@@ -91,7 +96,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           }

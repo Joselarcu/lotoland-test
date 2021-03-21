@@ -1,0 +1,8 @@
+@import "../../../styles/variables/colors";
+.navbar {
+  background-image: linear-gradient(90deg, $secondary-green, $tertiary-green);
+  background-color: $primary-green !important;
+}
+.navbar-brand {
+  color: $white !important;
+}

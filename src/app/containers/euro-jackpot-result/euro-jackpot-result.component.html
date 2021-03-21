@@ -1,0 +1,29 @@
+<div class="jackpot">
+  <h1 class="jackpot__title">Eurojackpot results & winning numbers</h1>
+  <div *ngIf="lastDraw$ | async">
+    <h3 class="jackpot__subtitle">{{ (lastDraw$ | async)?.date.full }}</h3>
+
+    <div class="jackpot__result">
+      <ng-container *ngFor="let n of (lastDraw$ | async)?.numbers">
+        <app-circle [value]="n" class="jackpot__result-number"></app-circle>
+      </ng-container>
+      <div class="jackpot__result-plus">+</div>
+      <ng-container *ngFor="let n of (lastDraw$ | async)?.euroNumbers">
+        <app-circle
+          [value]="n"
+          variant="gold"
+          class="jackpot__result-number"
+        ></app-circle>
+      </ng-container>
+    </div>
+    <div class="jackpot__winners">
+      <app-table
+        [header]="['Tier', 'Match', 'Winners', 'Amount']"
+        [rows]="tableRows$ | async"
+      ></app-table>
+    </div>
+  </div>
+  <app-loading
+    [isLoading]="!(lastDraw$ | async) || !(tableRows$ | async)"
+  ></app-loading>
+</div>

@@ -1,0 +1,14 @@
+@import "../../../styles/variables/colors";
+.circle {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  border: 2px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_gold {
+    border-color: $gold;
+  }
+}
