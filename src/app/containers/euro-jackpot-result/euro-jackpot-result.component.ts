@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { EuroJackpotService } from '../../services/euroJackpot.service';
-import { EuroJackpot, Odds, Rank } from '../../models/euroJackpot';
 import { formatNumber } from '@angular/common';
 import { getCurrencySymbol } from '@angular/common';
 import convertDecimalToRoman from 'src/app/utils/romanNumeralConverter';
+import { EuroJackpotService } from '../../services/euroJackpot.service';
+import { EuroJackpot, Odds } from '../../models/euroJackpot';
 import { AlertService } from '../../services/alert.service';
 
 @Component({
