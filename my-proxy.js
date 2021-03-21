@@ -18,7 +18,6 @@ app.get('/api/drawings/euroJackpot', (req, res) => {
                 if (error || response.statusCode !== 200) {
                     return res.status(500).json({ type: 'error', message: error.message });
                 }
-    
                 res.json(JSON.parse(body));
             }
         )

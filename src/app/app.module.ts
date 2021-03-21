@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CircleComponent } from './components/circle/circle.component';
 import { TableComponent } from './components/table/table.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     CircleComponent,
     TableComponent,
     LoadingComponent,
+    AlertComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

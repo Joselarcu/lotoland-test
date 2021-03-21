@@ -6,6 +6,7 @@ import { EuroJackpot, Odds, Rank } from '../../models/euroJackpot';
 import { formatNumber } from '@angular/common';
 import { getCurrencySymbol } from '@angular/common';
 import convertDecimalToRoman from 'src/app/utils/romanNumeralConverter';
+import { AlertService } from '../../services/alert.service';
 
 @Component({
   selector: 'app-euro-jackpot-result',
@@ -20,7 +21,10 @@ export class EuroJackpotResultComponent implements OnInit {
   currency: string;
   loading = false;
 
-  constructor(private jackpotService: EuroJackpotService) {}
+  constructor(
+    private jackpotService: EuroJackpotService,
+    public alertService: AlertService
+  ) {}
 
   ngOnInit(): void {
     this.initMatches();

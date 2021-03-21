@@ -24,6 +24,9 @@
     </div>
   </div>
   <app-loading
-    [isLoading]="!(lastDraw$ | async) || !(tableRows$ | async)"
+    [isLoading]="
+      (!(lastDraw$ | async) || !(tableRows$ | async)) &&
+      !(alertService.alerts$ | async)
+    "
   ></app-loading>
 </div>
